@@ -43,7 +43,7 @@ class Estudiante extends Model
      *
      * @var array
      */
-    protected $fillable = ['id','nombre','idCategoria','celular','fNacimiento','posicion','eps','tiposangre','responsable1','responsable2','celr1','celr2'];
+    protected $fillable = ['id','nombre','idCategoria','celular','fNacimiento','posicion','eps','tiposangre','responsable1','responsable2','celr1','celr2','detalle'];
 
 
     /**

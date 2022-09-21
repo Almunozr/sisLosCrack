@@ -64,6 +64,10 @@
                             <strong>Cel R2:</strong>
                             {{ $estudiante->celr2 }}
                         </div>
+                        <div class="form-group">
+                            <strong>Detalle:</strong>
+                            {{ $estudiante->detalle }}
+                        </div>
 
                     </div>
                 </div>

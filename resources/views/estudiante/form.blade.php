@@ -72,6 +72,11 @@
             {{ Form::text('celr2', $estudiante->celr2, ['class' => 'form-control' . ($errors->has('celr2') ? ' is-invalid' : ''), 'placeholder' => '###']) }}
             {!! $errors->first('celr2', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+        <div class="form-group">
+            {{ Form::label('Detalles') }}
+            {{ Form::text('detalle', $estudiante->detalle, ['class' => 'form-control' . ($errors->has('detalle') ? ' is-invalid' : '')]) }}
+            {!! $errors->first('detalle', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
 
     </div>
     <div class="box-footer mt20">

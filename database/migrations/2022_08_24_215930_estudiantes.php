@@ -30,6 +30,7 @@ class Estudiantes extends Migration
             $table->string('responsable2')->nullable();
             $table->string('celr1')->nullable();
             $table->string('celr2')->nullable();
+            $table->string('detalle')->nullable();
             $table->foreign('idCategoria')->references('id')->on('categorias');
             $table->timestamps();
         });
