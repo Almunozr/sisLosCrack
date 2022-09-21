@@ -81,7 +81,7 @@
 
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item lasli" >
-                                <a class="nav-link acciones" href="{{ route('estudiantes.index') }}"><strong>Estudiantes</strong> </a>
+                                <a class="nav-link acciones" href="{{ route('estudiantes.index') }}"><strong>Deportistas</strong> </a>
                             </li>
                             <li class="nav-item lasli">
                                 <a class="nav-link acciones" href="{{ route('categorias.index') }}"><strong>Categorias</strong></a>

@@ -13,7 +13,7 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Item') }}
+                                <u><strong>Pagos:</strong></u>
                             </span>
                             <select tye="button" value=" " class="btn btn-outline-secondary" placeholder="Categoria">
                                 <option value=""></option>
@@ -27,7 +27,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('items.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                    <strong>Crear Nuevo Pago</strong>
                                 </a>
                               </div>
                         </div>

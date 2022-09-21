@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Estudiante
+
+    <strong>Deportistas</strong>
 @endsection
 
 @section('content')
@@ -13,12 +14,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Estudiantes') }}
+                                <u><strong>Deportistas:</strong></u>
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('estudiantes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Crear Nuevo Estudiante') }}
+                                  {{ __('Crear Nuevo Deportista') }}
                                 </a>
                               </div>
                         </div>

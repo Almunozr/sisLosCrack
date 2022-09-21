@@ -39,7 +39,7 @@
 										<th>Nombre</th>
 										<th>Descripción</th>
 										<th>Valor</th>
-										<th>Asignar</th>
+										{{-- <th>Asignar</th> --}}
 
                                         <th></th>
                                     </tr>
@@ -52,13 +52,13 @@
 											<td>{{ $evento->nombre }}</td>
 											<td>{{ $evento->descripcion }}</td>
 											<td>{{ $evento->valor }}</td>
-                                            <td><select tye="button" value=" " class="btn btn-outline-secondary" placeholder="Categoria">
+                                            {{-- <td><select tye="button" value=" " class="btn btn-outline-secondary" placeholder="Categoria">
                                                 <option value=""></option>
                                                 @foreach ($categorias as $categoria)
-                                                    {{-- <option value="">{{++$i}}</option> --}}
+
                                                     <option class="lasCategorias" value="  ">{{ $categoria}}</option>
                                                 @endforeach
-                                            </select></td>
+                                            </select></td> --}}
 
                                             <td>
                                                 <form action="{{ route('eventos.destroy',$evento->id) }}" method="POST">
