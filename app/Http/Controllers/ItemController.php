@@ -157,6 +157,21 @@ class ItemController extends Controller
         $item = Item::find($id)->delete();
 
         return redirect()->route('items.index')
-            ->with('success', 'Item Eliminado');
+            ->with('success', 'Pago Eliminado');
+    }
+
+    public function pagar($id)
+    {
+        $item = Item::find($id)->update(['finalizado'=>'1']);
+
+        return redirect()->route('items.index')
+            ->with('success', 'Pago Actualizado');
+    }
+    public function retirar($id)
+    {
+        $item = Item::find($id)->update(['finalizado'=>null]);
+
+        return redirect()->route('items.index')
+            ->with('success', 'Pago Actualizado');
     }
 }

@@ -76,8 +76,13 @@
 
                                             <td>
                                                 <form action="{{ route('items.destroy',$item->id) }}" method="POST">
+                                                    @if ($item->finalizado==null)
                                                     {{-- <a class="btn btn-sm btn-info " href="{{ route('items.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a> --}}
-                                                    <a class="btn btn-sm btn-success" href="{{ route('items.edit',$item->id) }}"><i class="fa fa-fw fa-edit"></i> Pagar </a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('items.pagar',$item->id) }}"><i class="fa fa-fw fa-edit"></i> Pagar </a>
+                                                    @else
+                                                    <a class="btn btn-sm btn-success" href="{{ route('items.retirar',$item->id) }}"><i class="fa fa-fw fa-edit"></i> Retirar </a>
+
+                                                    @endif
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>

@@ -28,3 +28,5 @@ Route::resource('estudiantes', App\Http\Controllers\EstudianteController::class)
 Route::resource('categorias', App\Http\Controllers\CategoriaController::class)->middleware('auth');
 Route::resource('eventos', App\Http\Controllers\EventoController::class)->middleware('auth');
 Route::resource('items', App\Http\Controllers\ItemController::class)->middleware('auth');
+Route::get('items{id}/pagar',[App\Http\Controllers\ItemController::class, 'pagar'])->name('items.pagar');
+Route::get('items{id}/retirar',[App\Http\Controllers\ItemController::class, 'retirar'])->name('items.retirar');
