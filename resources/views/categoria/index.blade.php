@@ -36,7 +36,7 @@
                                     <tr>
                                         <th>No</th>
 
-										<th>Nombrecat</th>
+										<th>Categoría</th>
 
                                         <th></th>
                                     </tr>

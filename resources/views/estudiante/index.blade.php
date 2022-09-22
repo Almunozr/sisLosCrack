@@ -35,17 +35,17 @@
                             <table class="table table-striped table-hover" id="MiTabla">
                                 <thead class="thead">
                                     <tr>
-                                        <th>ID</th>
+                                        <th>N.Documento</th>
 
 										<th>Nombre</th>
 										<th>Categoría</th>
 										<th>Celular</th>
 										{{-- <th>Fnacimiento</th> --}}
-										<th>Posicion</th>
+										<th>Posición</th>
 										{{-- <th>Eps</th> --}}
-										<th>Tiposangre</th>
-										<th>Responsable1</th>
-										<th>Cel R1</th>
+										<th>T.Sangre</th>
+										<th>Responsable</th>
+										<th>Celular</th>
 										{{-- <th>Responsable2</th>
 										<th>Cel R2</th> --}}
 

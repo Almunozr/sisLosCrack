@@ -4,20 +4,20 @@
         @if(Route::is('items.create')){{-- Agrego funcion JS para asignar a todos los campos el valor escogido de idEvento --}}
 
             <div class="form-group">
-                {{ Form::label('Evento') }}
+                {{ Form::label('Evento*') }}
                 {{ Form::select('idEvento[]',$eventos, $item->idEvento, ['class' => 'form-control eventoEscogido' . ($errors->has('idEvento') ? ' is-invalid' : ''), 'placeholder' => 'Idevento']) }}
                 {!! $errors->first('idEvento', '<div class="invalid-feedback">:message</div>') !!}
             </div>
         @else
             <div class="form-group">
-                {{ Form::label('Evento') }}
+                {{ Form::label('Evento*') }}
                 {{ Form::select('idEvento[]',$eventos, $item->idEvento, ['class' => 'form-control' . ($errors->has('idEvento') ? ' is-invalid' : ''), 'placeholder' => 'Idevento']) }}
                 {!! $errors->first('idEvento', '<div class="invalid-feedback">:message</div>') !!}
             </div>
         @endif
         <div class="form-group">
-            {{ Form::label('idEstudiante') }}
-            {{ Form::text('idEstudiante[]', $item->idEstudiante, ['class' => 'form-control' . ($errors->has('idEstudiante') ? ' is-invalid' : ''), 'placeholder' => 'Idestudiante']) }}
+            {{ Form::label('idDeportista*') }}
+            {{ Form::text('idEstudiante[]', $item->idEstudiante, ['class' => 'form-control' . ($errors->has('idEstudiante') ? ' is-invalid' : ''), 'placeholder' => 'IdDeportista']) }}
             {!! $errors->first('idEstudiante', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         {{-- <div class="form-group">

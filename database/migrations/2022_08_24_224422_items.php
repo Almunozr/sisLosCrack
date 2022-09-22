@@ -21,7 +21,7 @@ class Items extends Migration
             $table->string('idEstudiante');
             // $table->integer('pago')->nullable()->default(0);
             $table->boolean('finalizado')->nullable()->default(false);
-            $table->foreign('idEstudiante')->references('id')->on('estudiantes'); //Que se borre Item cuando borro evento
+            $table->foreign('idEstudiante')->references('id')->on('estudiantes')->onDelete("cascade"); //Que se borre Item cuando borro evento
             $table->foreign('idEvento')->references('id')->on('eventos')->onDelete("cascade");
 
             $table->timestamps();

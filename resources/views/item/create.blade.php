@@ -33,8 +33,8 @@
                         {{-- <span>****************</span> --}}
                         <div class="box box-info padding-1">
                             <div class="form-group">
-                                {{ Form::label('Evento') }} {{-- Asigno el mismo idEvento para todos los campos(escogido)--}}
-                                {{ Form::select('otroName',$eventos, $item->idEvento, ['class' => 'form-control ', 'id' =>'asignarEvento','placeholder' => 'Evento']) }}
+                                {{ Form::label('Evento*') }} {{-- Asigno el mismo idEvento para todos los campos(escogido)--}}
+                                {{ Form::select('otroName',$eventos, $item->idEvento, ['class' => 'form-control ', 'id' =>'asignarEvento','placeholder' => 'Evento','required'=>'true']) }}
                                 {{-- {!! $errors->first('idEvento', '<div class="invalid-feedback">:message</div>') !!} --}}
                             </div>
                         </div>

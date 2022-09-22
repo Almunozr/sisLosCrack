@@ -2,8 +2,8 @@
     <div class="box-body">
         {{-- @if(Route::is('estudiantes.create') ) --}}
         <div class="form-group">
-            {{ Form::label('Número de identificación') }}
-            {{ Form::text('id', $estudiante->id, ['class' => 'form-control' . ($errors->has('id') ? ' is-invalid' : ''), 'placeholder' => 'N. Identificacion']) }}
+            {{ Form::label('N. Documento*') }}
+            {{ Form::text('id', $estudiante->id, ['class' => 'form-control' . ($errors->has('id') ? ' is-invalid' : ''), 'placeholder' => 'N. Documento']) }}
             {!! $errors->first('id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         {{-- @endif --}}
@@ -13,7 +13,7 @@
             {!! $errors->first('id', '<div class="invalid-feedback">:message</div>') !!}
         </div> --}}
         <div class="form-group">
-            {{ Form::label('nombre') }}
+            {{ Form::label('nombre*') }}
             {{ Form::text('nombre', $estudiante->nombre, ['class' => 'form-control' . ($errors->has('nombre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
             {!! $errors->first('nombre', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -23,8 +23,8 @@
             {!! $errors->first('idCategoria', '<div class="invalid-feedback">:message</div>') !!}
         </div> --}}
         <div class="form-group">
-            {{ Form::label('Categoria') }}
-            {{ Form::select('idCategoria', $categorias, $estudiante->idCategoria, ['class' => 'form-control' . ($errors->has('idCategoria') ? ' is-invalid' : ''), 'placeholder' => 'Categoria']) }}
+            {{ Form::label('Categoría*') }}
+            {{ Form::select('idCategoria', $categorias, $estudiante->idCategoria, ['class' => 'form-control' . ($errors->has('idCategoria') ? ' is-invalid' : ''), 'placeholder' => 'Categoría']) }}
             {!! $errors->first('idCategoria', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -38,18 +38,18 @@
             {!! $errors->first('fNacimiento', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('posicion') }}
-            {{ Form::text('posicion', $estudiante->posicion, ['class' => 'form-control' . ($errors->has('posicion') ? ' is-invalid' : ''), 'placeholder' => 'Posicion']) }}
+            {{ Form::label('posición') }}
+            {{ Form::text('posicion', $estudiante->posicion, ['class' => 'form-control' . ($errors->has('posicion') ? ' is-invalid' : ''), 'placeholder' => 'Posición']) }}
             {!! $errors->first('posicion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('eps') }}
+            {{ Form::label('EPS') }}
             {{ Form::text('eps', $estudiante->eps, ['class' => 'form-control' . ($errors->has('eps') ? ' is-invalid' : ''), 'placeholder' => 'Eps']) }}
             {!! $errors->first('eps', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('tiposangre') }}
-            {{ Form::text('tiposangre', $estudiante->tiposangre, ['class' => 'form-control' . ($errors->has('tiposangre') ? ' is-invalid' : ''), 'placeholder' => 'Tiposangre']) }}
+            {{ Form::label('Tipos de sangre') }}
+            {{ Form::text('tiposangre', $estudiante->tiposangre, ['class' => 'form-control' . ($errors->has('tiposangre') ? ' is-invalid' : ''), 'placeholder' => 'Tipo de sangre']) }}
             {!! $errors->first('tiposangre', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

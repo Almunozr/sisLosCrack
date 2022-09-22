@@ -14,14 +14,14 @@
                             {{-- <span class="card-title">Show Estudiante</span> --}}
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('estudiantes.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('estudiantes.index') }}">Volver</a>
                         </div>
                     </div>
 
                     <div class="card-body">
 
                         <div class="form-group">
-                            <strong>ID:</strong>
+                            <strong>N.Documento:</strong>
                             {{ $estudiante->id }}
                         </div>
                         <div class="form-group">

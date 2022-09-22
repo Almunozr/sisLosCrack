@@ -15,13 +15,7 @@
                             <span id="card_title">
                                 <u><strong>Pagos:</strong></u>
                             </span>
-                            <select tye="button" value=" " class="btn btn-outline-secondary" placeholder="Categoria">
-                                <option value=""></option>
-                                @foreach ($categorias as $categoria)
-                                    {{-- <option value="">{{++$i}}</option> --}}
-                                    <option class="lasCategorias" value="  ">{{ $categoria}}</option>
-                                @endforeach
-                            </select>
+
 
 
 
@@ -40,7 +34,7 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover">
+                            <table class="table table-striped table-hover" id="MiTabla">
                                 <thead class="thead">
                                     <tr>
                                         {{-- <th>No</th> --}}
@@ -48,9 +42,9 @@
 										{{-- <th>Idevento</th> --}}
 										<th>Evento</th>
 										<th>N.Documento</th>
-										<th>NombreEs</th>
-										<th>Categoria</th>
-										<th>valor</th>
+										<th>Nombre</th>
+										<th>Categoría</th>
+										<th>Valor</th>
 										<th>Estado</th>
 
                                         <th></th>
@@ -109,6 +103,14 @@
 
         }
         console.log(cats)
+
+
+
+        var tabla= document.querySelector("#MiTabla")
+        var dataTable = new DataTable(tabla,{
+            perPage:20
+        });
+
 
     </script>
 @endsection

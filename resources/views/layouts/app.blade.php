@@ -84,7 +84,7 @@
                                 <a class="nav-link acciones" href="{{ route('estudiantes.index') }}"><strong>Deportistas</strong> </a>
                             </li>
                             <li class="nav-item lasli">
-                                <a class="nav-link acciones" href="{{ route('categorias.index') }}"><strong>Categorias</strong></a>
+                                <a class="nav-link acciones" href="{{ route('categorias.index') }}"><strong>Categorías</strong></a>
                             </li>
                             <li class="nav-item lasli">
                                 <a class="nav-link acciones" href="{{ route('eventos.index') }}"><strong>Eventos</strong></a>
