@@ -24,6 +24,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Route::get('/home', function () {
 //     return view('estudiante.index');
 // });
+Route::resource('home', App\Http\Controllers\HomeController::class)->middleware('auth');
+
 Route::resource('estudiantes', App\Http\Controllers\EstudianteController::class)->middleware('auth');
 Route::resource('categorias', App\Http\Controllers\CategoriaController::class)->middleware('auth');
 Route::resource('eventos', App\Http\Controllers\EventoController::class)->middleware('auth');

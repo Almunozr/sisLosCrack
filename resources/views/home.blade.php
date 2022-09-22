@@ -5,7 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Sesión Iniciada Correctamente') }}</div>
+                <div class="card-header">{{ __('Sesión Iniciada Correctamente') }}
+                    {{-- <a class="btn btn-sm btn-success" href="{{ route('home.create') }}"><i class="fa fa-fw fa-edit"></i> Copia de Seguridad</a> --}}
+
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
