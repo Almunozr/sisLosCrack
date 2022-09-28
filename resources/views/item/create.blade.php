@@ -23,18 +23,22 @@
 
 
                     <div class="card-body">
+                        {{-- Formulario para pago único --}}
                         <form method="POST" class="pagoUnico"   style="display: none" action="{{ route('items.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('item.form')
 
                         </form>
+
+
+
                     <div class="pagoCategorias" style="display: none" >
                         {{-- <span>****************</span> --}}
                         <div class="box box-info padding-1">
                             <div class="form-group">
                                 {{ Form::label('Evento*') }} {{-- Asigno el mismo idEvento para todos los campos(escogido)--}}
-                                {{ Form::select('otroName',$eventos, $item->idEvento, ['class' => 'form-control ', 'id' =>'asignarEvento','placeholder' => 'Evento','required'=>'true']) }}
+                                {{ Form::select('otroName',$eventos, $item->idEvento, ['class' => 'form-control ', 'id' =>'asignarEvento','placeholder' => 'Evento','required'=>'true','onchange'=>'mostrarGuardarTodo()']) }}
                                 {{-- {!! $errors->first('idEvento', '<div class="invalid-feedback">:message</div>') !!} --}}
                             </div>
                         </div>
@@ -101,7 +105,7 @@
                                 <button type="submit" id="guardarF" style="display: none" class="btn btn-primary">*Guardar*</button>
                             </div>
                             <div class="box-footer mt20">
-                                <button type="button" onclick="aplicarDatosFormulario()" class="btn btn-primary">Guardar</button>
+                                <button id="guardarTodos" style="display:none" type="button" onclick="aplicarDatosFormulario()" class="btn btn-primary">Guardar</button>
                             </div>
 
                             {{-- ****** --}}
@@ -144,6 +148,11 @@
                                 pUnico.style.display="none";
                                 pCat.style.display="block";
 
+                            }
+
+                            function mostrarGuardarTodo(){
+                                boton = document.querySelector("#guardarTodos");
+                                boton.style.display = "block"
                             }
                             function aplicarDatosFormulario(){
                                 evento = document.querySelector("#asignarEvento").value;

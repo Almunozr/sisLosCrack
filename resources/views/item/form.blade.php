@@ -5,7 +5,7 @@
 
             <div class="form-group">
                 {{ Form::label('Evento*') }}
-                {{ Form::select('idEvento[]',$eventos, $item->idEvento, ['class' => 'form-control eventoEscogido' . ($errors->has('idEvento') ? ' is-invalid' : ''), 'placeholder' => 'Idevento']) }}
+                {{ Form::select('idEvento[]',$eventos, $item->idEvento, ['class' => 'form-control eventoEscogido' . ($errors->has('idEvento') ? ' is-invalid' : ''), 'placeholder' => 'Evento']) }}
                 {!! $errors->first('idEvento', '<div class="invalid-feedback">:message</div>') !!}
             </div>
         @else
@@ -26,7 +26,7 @@
             {!! $errors->first('pago', '<div class="invalid-feedback">:message</div>') !!}
         </div> --}}
         <div class="form-group">
-            {{ Form::label('finalizado') }}
+            {{ Form::label('finalizado (0:No / 1:Sí)') }}
             {{ Form::number('finalizado[]', $item->finalizado, ['class' => 'form-control' . ($errors->has('finalizado') ? ' is-invalid' : ''), 'placeholder' => 'Finalizado', 'min'=>'0', 'max'=>'1']) }}
             {{-- {!! $errors->first('finalizado', '<div class="invalid-feedback">:message</div>') !!} --}}
         </div>
