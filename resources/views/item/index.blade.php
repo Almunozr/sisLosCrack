@@ -108,9 +108,14 @@
 
         var tabla= document.querySelector("#MiTabla")
         var dataTable = new DataTable(tabla,{
-            perPage:20
+            perPage:1000
         });
-
-
+        
     </script>
+    <style>
+        
+        .dataTable-dropdown{
+            display: none;
+        }
+    </style>
 @endsection

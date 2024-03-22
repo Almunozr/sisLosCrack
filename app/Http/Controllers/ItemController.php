@@ -21,7 +21,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Item::paginate();
+        $items = Item::paginate(1000);
         $categorias=Categoria::pluck('nombrecat','id');
 
         return view('item.index', compact('items','categorias'))

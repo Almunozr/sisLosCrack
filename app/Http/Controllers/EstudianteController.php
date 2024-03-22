@@ -19,7 +19,7 @@ class EstudianteController extends Controller
      */
     public function index()
     {
-        $estudiantes = Estudiante::paginate();
+        $estudiantes = Estudiante::paginate(500);
 
         return view('estudiante.index', compact('estudiantes'));
             // ->with('i', (request()->input('page', 1) - 1) * $estudiantes->perPage());
